@@ -1,0 +1,18 @@
+Week 3:
+Scrum Meeting: 10/5
+
+Steps Taken:
+Downloaded Google Form responses as an Excel sheet
+Filtered Mentor and Mentee responses to the most prominent ones
+Uploaded Excel to GitHub
+Made a Community CoLab to work on the coding process
+
+Challenges/Blockages: 
+How to best match the checkbox questions for mentors/mentees to reflect as closely as possible to ensure the best pairing (We think open-ended responses might have to be manually entered by the user)
+Possibly having to change the extrovert/introvert question to multiple choice (or using if/else statements for more scoring based on how much they scaled it)
+
+Goals for Next Meeting: 
+Manually enter 1 mentor and 2 mentees to get some coding program done
+Work on Sprint Review for Midterms Week
+Determine if any other responses need to be filtered
+Figure out how to also find compatibility between each mentee too
