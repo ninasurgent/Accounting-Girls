@@ -1,0 +1,16 @@
+Week 4:
+Scrum Meeting: 10/12
+
+Steps Taken:
+Manually typed in 2 mentees and 1 mentor to begin the coding process in Colab
+Calculated matching scores/determined a scoring rubric
+Took a few questions away that didn’t really seem necessary
+
+Challenges/Blockages: 
+How can we make this moldable for all mentors/mentees?
+& going off of that, how do we connect it to Excel/google sheets so that it auto-fills answers?
+The score comparisons work individually, but how to form them into groups is going to be a challenge in the future
+
+Goals for Next Meeting: 
+Prepare for Sprint Review on Thursday & gather thoughts
+Finish creating a reusable scoring function for all mentees/mentors instead of inputting one by one
