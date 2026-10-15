@@ -1,0 +1,14 @@
+Scrum Meeting: 10/15
+
+Steps Taken:
+Prepared for our Sprint Review today to give an overview of what we have worked on as a team over the past month and we also are finalizing a game plan to get this project completed and done on time.
+Imported google sheets to our google Colab document so that is can autofill answers and there’s less work in the coding process
+Communicated what steps we want to do next and who can work on what code
+
+Challenges/Blockages:
+Finding more ways to minimize information and make the responses as clear as we can so that our code lines up with it
+Continuing to work on the coding process in Colab, how do we create a reusable scoring function for all mentees/mentors rather than doing it for each one?
+Can we connect specific keywords from each response of mentees to each response to mentors and what code can we use for that?
+
+Goals for Next Meeting:
+Have a better handle on the coding of the mentor/mentee information from their responses and how best we can match them using the least amount of lines of code that is still clear and accessible to someone who’s looking at the information
