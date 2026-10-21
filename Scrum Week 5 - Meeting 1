@@ -1,0 +1,13 @@
+Scrum Meeting: 10/21
+
+Steps Taken:
+Added our google sheets to git hub and connecting our platforms together so it’s able to autofill answers and make it easier on us with automating code rather than inputting everything by hand ourselves
+Planned our next steps in what we want to solve in our google colab code and brainstorm strategies on how to achieve it like consolidating our google sheets in google colab
+
+Challenges/Blockages:
+Continuing to work on the coding process in Colab, how do we create a reusable scoring function for all mentees/mentors rather than doing it for each one?
+How to connect specific keywords from each response of mentees to each response to mentors for short answer questions since these won’t be automated. Still have not figured out a way to focus on that
+
+Goals for Next Meeting:
+Divide up who is working on what code and make sure we are posting this information through our branches
+Once code looks good we can start moving lines of code into main and finalize our google colab code as one document to run the program
