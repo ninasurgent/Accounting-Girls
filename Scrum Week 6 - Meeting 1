@@ -1,0 +1,13 @@
+Scrum Meeting: 10/26
+
+Steps Taken:
+We met in class today.
+Matthew was not in class so Nina, Natalie, and Kat were working on the project together and added pieces of code to our mock Google Colab with mentors and mentees
+We added the finishing part of matching mentors and mentees and we also started the fuzzy matching code for the one short answer mentees fill out and implemented this within the matching portion of the code
+
+Challenges/Blockages:
+Need to test to see if the fuzzy matching code works and pulls keywords from the question that mentees answer to the preferences that mentors have
+
+Goals for Next Meeting:
+Continue to work towards our goal of each person having a delegated task and completing this by Thursday so we can submit our progress to a GitHub branch and eventually finalize it and move it to the Main branch
+Coordinate with everyone and check in before our next meeting on Thursday to see how our progress is going
