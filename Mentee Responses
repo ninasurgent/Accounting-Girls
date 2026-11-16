@@ -1,0 +1,58 @@
+#Mentee Responses
+
+class Mentee:
+  def __init__(self, name, major, minor, undeclared, living, beechwood, clubs, greeklife, athlete, personaltime, social, lgbtq, ethnicgroup, sharedidentity, bond, communication, availability):
+    self.name = name
+    self.major = major
+    self.minor = minor
+    self.undeclared = undeclared
+    self.living = living
+    self.beechwood = beechwood
+    self.clubs = clubs
+    self.greeklife = greeklife
+    self.athlete = athlete
+    self.personaltime = personaltime
+    self.social = social
+    self.lgbtq = lgbtq
+    self.ethnicgroup = ethnicgroup
+    self.sharedidentity = sharedidentity
+    self.bond = bond
+    self.communication = communication
+    self.availability = availability
+
+mentees = []
+
+for index, row in mentee_responses.iterrows():
+    name = (row["Preferred First Name"] + " " + row["Last Name"])
+    phone = (row["Phone Number"])
+    email = (row["Email"])
+    pronouns = (row["What are your preferred pronouns?"])
+    major = (row["What is your planned major? (If undeclared, please select undeclared)"])
+    minor = (row["Do you have a planned or possible minor? Please select below, if not select: No."])
+    living = (row["Will you be living on campus or commuting from home?"])
+    hometown = (row["What is your hometown and state?"])
+    beechwood = (row["Do you plan to live in Beechwood (Honors Housing) your freshman year?"])
+    dorms = (row["If living on campus but not Beechwood Hall, what dorm do you plan to live in?"])
+    clubs = (row["What clubs/student orgs/team are you interested in joining at Monmouth?"])
+    greeklife = (row["Are you interested in joining Greek Life?"])
+    athlete = (row["Are you a college varsity athlete?"])
+    personaltime = (row["What do you do in your personal time separate from school-supported activities? (Select up to 3)"])
+    social = (row["How would you describe your social style? 1 being introvert and 5 being extrovert."])
+    lgbtq = (row["Are you a member of the LGBTQ+ community?"])
+    ethnicgroup = (row["Do you feel particularly connected to an ethnic background/religion/cultural group/LGBTQ+ community/heritage and would like to connect with your mentor over this? Select yes, no, or non-applicable"])
+    hopetogain = (row["What are you hoping to gain most from the Peer Mentoring Program? (Select up to 3)"])
+    sharedidentity = (row["Would you prefer to be matched with a mentor who shares your gender identity?"])
+    bond = (row["What areas are you hoping to bond over with your mentor?\n\n(Select up to 3)"])
+    other = (row["Is there anything else you would like us to consider when creating mentor-mentee pairings?"])
+    communication = (row["How would you prefer to communicate with your mentor?"])
+    availability = (row["How available would you like your mentor to be?"])
+
+    mentee = Mentee(name, major, minor, undeclared, living, beechwood, clubs, greeklife, athlete, personaltime, social, lgbtq, ethnicgroup, sharedidentity, bond, communication, availability)
+
+    mentees.append(mentee)
+
+count = 0
+print(f"\nMentee Names")
+for mentee in mentees:
+  count = count + 1
+  print(f"Mentee {count}: {mentee.name}")
