@@ -1,0 +1,73 @@
+def match_score(mentor, mentee):
+  score = 0
+
+  if mentor.major == mentee.major:
+    score = score + 2
+
+  if mentor.minor == mentee.minor:
+    score = score + 1
+
+  if mentor.undeclared == "Yes" and mentee.major == "Undeclared":
+    score = score + 1
+
+  if mentor.living == mentee.living:
+    score = score + 2
+
+  if mentor.beechwood == mentee.beechwood:
+    score = score + 1
+
+  score = score + fuzzy_match(mentor.clubs, mentee.clubs)
+
+  if mentor.greeklife == mentee.greeklife:
+    score = score + 1
+
+  if mentor.athlete == mentee.athlete:
+    score = score + 1
+
+  mentor_answers = mentor.personaltime.split(", ")
+  mentee_answers = mentee.personaltime.split(", ")
+
+  for answer in mentor_answers:
+    if answer != "" and answer in mentee_answers:
+      score = score + 2
+
+  if mentor.social == mentee.social:
+    score = score + 1
+
+  if mentor.lgbtq == mentee.lgbtq:
+    score = score + 1
+
+  if mentor.ethnicgroup == mentee.ethnicgroup:
+    score = score + 1
+
+  if mentor.sharedidentity == mentee.sharedidentity:
+    score = score + 1
+
+  mentor_answers = mentor.bond.split(", ")
+  mentee_answers = mentee.bond.split(", ")
+
+  for answer in mentor_answers:
+    if answer != "" and answer in mentee_answers:
+      score = score + 1
+
+  if mentor.communication == mentee.communication:
+    score = score + 1
+
+  if mentor.availability == mentee.availability:
+    score = score + 1
+
+  return score
+
+print(mentor.name)
+print(mentee.name)
+
+match_score(mentor, mentee)
+
+# Matching Scores
+
+for mentee in mentees:
+  print(f"\nMentee: {mentee.name}")
+
+  for mentor in mentors:
+    score = match_score(mentor, mentee)
+    print(f"Mentor: {mentor.name} - Score: {score}")
