@@ -1,0 +1,18 @@
+# Mentee Google Sheet
+
+import gspread
+import pandas as pd
+from google.auth import default
+from google.colab import auth
+auth.authenticate_user()
+creds, _ = default()
+gc = gspread.authorize(creds)
+spreadsheet = gc.open_by_key('1B_3tx6u48CIEar-zRHSeIvgGza9tvttdmgA8gxAojN8')
+worksheet = spreadsheet.get_worksheet(1)
+df = pd.DataFrame(worksheet.get())
+# Code for making the first row as header. Remove if not needed.
+df.columns = df.iloc[0]
+df = df.drop(0)
+df.head()
+
+mentee_responses = df
