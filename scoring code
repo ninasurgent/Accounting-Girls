@@ -1,0 +1,44 @@
+# Group Formation
+num_mentors = int(input("Enter the number of mentors: "))
+num_mentees = int(input("Enter the number of mentees: "))
+
+mentor_max = int(input("Enter the maximum number of mentees per mentor: "))
+
+def compatibility():
+
+  for mentor in mentors:
+    mentor.group = []
+    mentor_max = 4
+
+  assigned = []
+
+  for i in range(len(mentees)):
+    highest_score = -1
+    best_mentor = None
+    best_mentee = None
+
+    for mentee in mentees:
+      if mentee not in assigned:
+
+        for mentor in mentors:
+          if len(mentor.group) < 4:
+            score = match_score(mentor, mentee)
+
+            if score > highest_score:
+              highest_score = score
+              best_mentor = mentor
+              best_mentee = mentee
+
+    if best_mentor is not None:
+      best_mentor.group.append(best_mentee.name)
+      assigned.append(best_mentee)
+    else:
+      print(f"No space available for {mentee.name}")
+
+  for mentor in mentors:
+    print(f"\nMentor: {mentor.name}")
+
+    for name in mentor.group:
+      print(name)
+
+compatibility()
