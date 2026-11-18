@@ -1,0 +1,37 @@
+#Scoring System + Fuzzy Matching
+
+!pip install rapidfuzz
+from rapidfuzz import fuzz
+import re
+
+def get_keywords(answer):
+
+  answer = str(answer).lower()
+  answer = re.sub(r'[^\w\s]', ' ', answer)
+
+  stop_words = ["i", "am", "the", "a", "an", "and","to", "of", "in", "with", "my", "want", "like", "enjoy", "that","for", "is", "it", "club", "clubs"]
+  words = answer.split()
+  keywords = []
+
+  for word in words:
+      if word not in stop_words:
+        keywords.append(word)
+
+  return keywords
+
+def fuzzy_match(answer1, answer2):
+  clubs1 = answer1.lower().replace(" and ", ",").split(",")
+  clubs2 = answer2.lower().replace(" and ", ",").split(",")
+
+  points = 0
+
+  for club1 in clubs1:
+    for club2 in clubs2:
+      if club1.strip() != "" and club2.strip() != "":
+        similarity = fuzz.ratio(club1.strip(), club2.strip())
+
+        if similarity >= 85:
+          points = points + 1
+          break
+
+  return points
