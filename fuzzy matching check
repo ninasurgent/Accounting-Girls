@@ -1,0 +1,12 @@
+# Fuzzy Matching Check
+
+for mentee in mentees:
+  print(f"\nMentee: {mentee.name}")
+  print(f"Clubs: {mentee.clubs}")
+
+  for mentor in mentors:
+    points = fuzzy_match(mentor.clubs, mentee.clubs)
+
+    print(f"Mentor: {mentor.name}")
+    print(f"Clubs: {mentor.clubs}")
+    print(f"Club Points: {points}")
