@@ -1,0 +1,8 @@
+# Matching Scores
+
+for mentee in mentees:
+  print(f"\nMentee: {mentee.name}")
+
+  for mentor in mentors:
+    score = match_score(mentor, mentee)
+    print(f"Mentor: {mentor.name} - Score: {score}")
